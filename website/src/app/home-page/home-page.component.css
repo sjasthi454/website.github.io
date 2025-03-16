@@ -1,3 +1,8 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,800");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
 .video-container {
   position: relative;
   top: 0;
@@ -583,7 +588,6 @@ body {
 	  text-decoration: none;
   }
   
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -702,8 +706,7 @@ ul {
   }
 }
 
-@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
-@import url("https://fonts.googleapis.com/css?family=Raleway:400,800");
+
 
 .testimonials-container {
   display: flex;
