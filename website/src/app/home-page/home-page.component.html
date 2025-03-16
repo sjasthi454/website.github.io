@@ -1,0 +1,170 @@
+<div>
+  <div class="video-container">
+    <video autoplay loop muted playsInline id="bgVideo">
+      <source src="assets/video/fishingVideo.mp4" type="video/mp4">
+    </video>
+
+    <div class="navbar">
+      <mat-toolbar class="toolbar">
+        <div class="left-section">
+          <button mat-icon-button style="color: white;">
+            <mat-icon>menu</mat-icon>
+          </button>
+          <span class="brand-title">OCEAN HARVEST FISHERIES </span>
+        </div>
+
+        <div class="nav-links">
+          <a mat-button routerLink="/home">WHO WE ARE</a>
+          <a mat-button routerLink="/about">OUR FISH</a>
+          <a mat-button routerLink="/ourProducts">PRICING</a>
+          <a mat-button routerLink="/ourServices">TESTIMONIALS</a>
+          <button class="custom-button">
+            <a mat-button routerLink="/contactInfo">Contact</a>
+          </button>
+        </div>
+      </mat-toolbar>
+
+      <div style="width: 50%; color:aliceblue; font-size: 15px; margin: 2rem">
+        <p>We specialize in exporting premium, authentic Indian fish, farm-raised with no antibiotics and under the most
+          natural, sustainable conditions. Our commitment is to deliver the freshest, high-quality seafood straight from
+          our farms to global markets, ensuring taste, nutrition, and purity in every bite.</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin: 2rem;">
+    <h3 style="text-align:center">Welcome to Ocean Harvest Fisheries</h3>
+    <p style="text-align: center">This is the place to find the freshest and authentic Sea Food.</p>
+  </div>
+
+  <div class="gallery">
+    <div class="left">
+      <div class="desktopContent">
+        <div #desktopContentSection class="desktopContentSection">
+          <p style="font-size: 20px; font-weight: bold;">Black Tiger Prawns (Penaeus monodon) – "The Ocean’s Royalty"
+          <p>
+          <p style="font-size: 16px;">Low in calories, rich in selenium and iodine, supports metabolism.</p>
+          <p style="font-size: 16px">Taste: Sweet, rich, and juicy with a firm texture.</p>
+        </div>
+        <div #desktopContentSection class="desktopContentSection">
+          <p style="font-size: 20px; font-weight: bold;">Rohu (Labeo rohita) – "The King of Indian Rivers"
+          <p>
+          <p style="font-size: 16px;">High in protein and omega-3, promotes heart health and brain function.</p>
+          <p style="font-size: 16px">Taste: Mild, slightly sweet, and flaky.</p>
+        </div>
+        <div #desktopContentSection class="desktopContentSection">
+          <p style="font-size: 20px; font-weight: bold;">Indian Mackerel (Rastrelliger kanagurta) – "The Omega-3
+            Powerhouse"
+          <p>
+          <p style="font-size: 16px;">Packed with omega-3, promotes cardiovascular health and reduces inflammation.</p>
+          <p style="font-size: 16px"> Taste: Rich, slightly oily with a meaty texture.</p>
+        </div>
+        <div #desktopContentSection class="desktopContentSection">
+          <p style="font-size: 20px; font-weight: bold;">Hilsa (Tenualosa ilisha) – "The Silver Queen of Bengal"
+          <p>
+          <p style="font-size: 16px;">Extremely rich in omega-3 fatty acids, great for heart health.</p>
+          <p style="font-size: 16px">Taste: Unmatched richness with an oily, buttery texture.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="desktopPhotos">
+        <div #desktopPhoto class="desktopPhoto black"></div>
+        <div #desktopPhoto class="desktopPhoto rohu"></div>
+        <div #desktopPhoto class="desktopPhoto indian"></div>
+        <div #desktopPhoto class="desktopPhoto hilsa"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bubbles">
+    <img src="assets/video/bubble.png">
+    <img src="assets/video/bubble.png">
+    <img src="assets/video/bubble.png">
+    <img src="assets/video/bubble.png">
+    <img src="assets/video/bubble.png">
+    <img src="assets/video/bubble.png">
+    <img src="assets/video/bubble.png">
+  </div>
+  <a mat-button routerLink="/contactInfo" class="floating-contact-button">
+    Enquire Now
+  </a>
+
+  <div>
+    <h3 style="text-align: center">Our Partners</h3>
+  </div>
+
+  @if (images) {
+  <ngb-carousel class="img-carousel">
+    <ng-template ngbSlide>
+      <div class="img-wrapper">
+        <img [src]="images[0]" alt="first slide" />
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="img-wrapper">
+        <img [src]="images[1]" alt="second slide" />
+      </div>
+    </ng-template>
+  </ngb-carousel>
+  }
+  <div style="text-align: center; font-size: 18px; margin: 2rem">
+    <p style="color: teal; font-weight: bold;">Learn more about becoming a partner!</p>
+  </div>
+
+  <div class="testimonials-container">
+    <figure class="review-container" *ngFor="let testimonial of testimonials">
+      <blockquote>
+        {{ testimonial.quote }}
+        <div class="arrow"></div>
+      </blockquote>
+      <div class="author">
+        <p style="font-size: 12px;">{{ testimonial.company }}</p>
+      </div>
+    </figure>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Services</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Partnership Program</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Our Products</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Payment Options</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="#">Address - 70 North St, 30346, GA</a></li>
+            <li><a href="#">Call Us At - 703-123-4567</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#"><img src="assets/video/facebook.jpg" alt="Facebook"></a>
+            <a href="#"><img src="assets/video/insta.jpg" alt="Instagram"></a>
+            <a href="#"><img src="assets/video/youtube.jpg" alt="LinkedIn"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
